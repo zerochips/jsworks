@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지 반복하기</title>
+    <style>
+        section{ width: 600px; margin: 0 auto; text-align: center; }
+        /* margin: 0 auto; 자기한테만 적용됨 */
+        /* text-align - 자식관계에 있는 얘들한테 적용할 때 */
+        img{ border-radius: 5px;; }
+    </style>
+</head>
+<body>
+    <section>
+        <h2>커피의 세계</h2>
+        <img src="./images/coffee-pink.jpg" alt="커피잔" id="pic">
+    </section>
+
+    <script>
+        //이제 이미지 3장을 준비했습니다
+        let picture = ["./images/coffee-pink.jpg", "./images/coffee-blue.jpg", "./images/coffee-gray.jpg"];
+
+        //변수에 담아서
+        let picIdx = 0;
+        
+        //호출
+        showSlide();
+
+        function showSlide(){
+            let img = document.getElementById("pic");  //이미지를 가져옵니다
+            img.src = picture[picIdx];                 //이미지 소스가 들어가죠 = let picture의 이미지 let picIdx 변수
+            picIdx++;                                  //그러면 이제 반복해서 증가시켜야 겠죠
+
+            if(picIdx == picture.length)               //같아질 경우에 다시 초기화 시켜야겠죠 0으로 보내~
+                picIdx = 0;                            //여기 까지만 하면 한 번 밖에 안되니까
+                
+                                                       //계속 반복할수 있게 만들어야겠죠 아래 설정해 볼게요
+                setTimeout(showSlide, 1000);           //재귀 호출(콜백 함수)
+            }
+
+            /* setTimeout(function() {console.log('timeout'); }, 1000);
+            setInterval(function() {console.log('interval'); }, 1000); */
+    </script>
+</body>
+</html>

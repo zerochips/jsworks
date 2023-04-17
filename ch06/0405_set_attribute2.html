@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setAttribute() 함수 사용</title>
+    <style>
+        #content{
+            width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .small{
+            width: 100px;
+            height: 100px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <section id="content">
+        <h2>커피의 세계</h2>
+        <div>
+            <img src="./images/coffee-blue.jpg" alt="커피잔" id="cup" width="300" height="300">
+            <!-- 이 사진을 선택해서 gray 이미지로 바꿔볼게요 -->
+        </div>
+        <div>
+            <img src="./images/coffee-blue.jpg" alt="커피잔" class="small">
+            <!-- class style에서 사용할 거예요 -->
+        </div>
+    </section>
+
+    <script>
+        let bigPic = document.querySelector("#cup");  //이미지를 바뀌는건 얘야
+        let smallPic = document.querySelector(".small");  //클릭을 하는건 얘고
+
+        //클릭 했을 때 이미지 변경 되도록 설정해줄게요
+        smallPic.onclick = function(){
+            bigPic.setAttribute("src", "./images/coffee-gray.jpg");  //바뀔 이미지 선택 //둘 다 " " 가  필요함                                                                     
+        }
+    </script>
+</body>
+</html>
+
+<!-- 
+    document.getElementById("pic").getAttribute(src) //인자가 하나가 오는거고
+    querySelector("#btn").setAttribute(속성, 송성값) //인자가 2개가 오고
+ -->

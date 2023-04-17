@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>버튼 토글 기능</title>
+    <style>
+        button{
+            margin: 10px;
+        }
+        .pic{
+            display:none;
+        }
+    </style>
+</head>
+<body>
+    <!-- <button onclick="showHide()">보이기</button> -->
+    <button onclick="showHide()" id="btnText">보이기</button>
+
+    <div>
+        <img src="./images/flower1.jpg" alt="꽃" id="pic" class="pic" >
+        <!-- <img src="./images/flower1.jpg" alt="꽃" id="pic" style="display: block"> 이미지 안보였다 보이게 하려면-->
+    </div>
+
+    <script>        
+        function showHide(){
+            //let sw = 0; //현재 상태에선 생략해도 실행 됨
+            let img = document.getElementById("pic");
+            let btnText = document.getElementById("btnText");
+
+            if(img.style.display == "block"){
+                img.style.display = "none";
+                btnText.innerText = "보이기";
+                //sw = 1;
+            }else{
+                img.style.display = "block";
+                btnText.innerText = "숨기기";
+                //보이면 상태를 0으로
+                //sw = 0;
+            }
+        }
+    </script>
+</body>
+</html>
+
+<!-- 처음에 보이게 -->
+<!-- <script>
+    function showHide(){
+        let sw = 0;
+        let img = document.getElementById("pic");
+        if(img.style.display == "none"){
+            img.style.display = "block";
+            sw = 1;
+        }else{
+            img.style.display = "none";
+            sw = 0;
+        }
+    }
+</script> -->
+
+<!-- 안보이게 -->
+<!-- <script>
+    function showHide(){
+        let sw = 0;
+        let img = document.getElementById("pic");
+        if(img.style.display == "block"){
+            img.style.display = "none";
+            sw = 1;
+        }else{
+            img.style.display = "block";
+            sw = 0;
+        }
+    }
+</script> -->
+
+<!-- 
+    하나의 키(버튼)가 2가지 기능을 가질 때 Toggle(토글)
+
+    button onclick=showHid()
+    let sw = false; //상태변수
+    function showHide(){
+    if(조건식){
+        숨기기
+    sw=1
+    }else{
+    보이기
+    sw = false;
+    }
+ -->

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onchange 속성</title>
+</head>
+<body>
+    <input type="text" onchange="MyFunction()" >
+
+    <script>
+        function MyFunction(){
+            //value 속성은 input에 입력된 값
+            //이 값을 변수에 담아
+            //포커스를 벗어났을 때(입력이 끝났을 때)
+            //발생하는 이벤트
+            let value = document.querySelector("input").value;
+            console.log(value);
+        }
+    </script>
+</body>
+</html>
+
+<!-- 
+    <button onclick="myFunc()">
+    <button onchange="myFunc()">
+    <a>
+
+    onchange 속성
+    input 태그에서 많이 사용함
+    <select>
+
+    <script>
+    pic.onclick
+    </script>
+ -->

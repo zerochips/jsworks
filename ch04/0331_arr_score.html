@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열의 연산</title>
+    <script>
+        //5명의 학생의 수학 점수 가 있다
+        let score = [90, 85, 60, 80, 70]; //[] 안 설정값을 인덱스 라고 말함
+        let sumV = 0; //총점 - 저장할 변수 - //let sumV;
+        let avgV;   //평균 - 이미 총점이 있고 개수가 있기 때문에 let avgV; 이렇게 선언 가능 - let avgV = 0.0; ← 원래 이렇게 표시해야 됨
+
+
+        //----------------------------점수 추가 -번 인덱스에 95점 추가 해볼것----------------------------
+        //score[5] = 95;
+        score.push(95); //맨 뒤에 추가
+        
+
+
+        console.log(score[0]); //특정한 점수에 갈 때
+
+        //----------------------------배열로 조회----------------------------
+        //console.log(score); // 출력 시 [] //스코어 전체가 그대로 나옴 → score = [90, 85, 60, 80, 70];
+        //document.write(score + " "); 나는 이렇게 썼었고
+
+        document.write(score);        //출력 [, , ]이렇게 정리되어 있음 - + " " 설정을 안해줘서 붙어서 출력됨
+        document.write("<br>");
+
+        //---------------------------- 전체 조회 ----------------------------
+        for(var i=0; i<score.length; i++){
+            document.write(score[1] + " "); //여기에 console.log 를 사용해서 표시가 안됐었음
+        }
+        document.write("<br>");
+
+        console.log("배열의 크기 : " + score.length + "개");
+
+        /* 
+         i=0, score[0] 90 | i=0, score[0] 이 들어왔을 때 스코어는 90 이 출력됨
+         i=1, score[1] 85 | 
+         i=2, score[2] 60 | 
+         i=3, score[3] 80 | 
+         i=4, score[4] 70 |
+        */
+
+        //----------------------------총점 - 변수가 필요한데요 ----------------------------
+        for(var i=0; i<score.length; i++){
+            //sumV = sumV + i; //배열 안할 때
+            sumV += score[i]; // 누적합계
+            console.log("score[i]=" + score[i] + ", sumV=" + sumV);
+        }
+        document.write("총점 : " + sumV);
+
+        document.write("<br>");
+
+        //---------------------------- 평균 = 총점 /개수 ----------------------------
+        avgV = sumV / score.length;
+        document.write("평균 : " + avgV);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마우스이벤트</title>
+    <script src="./js/jquery-3.6.4.js"></script>
+    <style>
+        *{ margin: 0 auto; padding: 0; }
+        .pic{ background: #ccc; }
+        .pic img{ 
+            /* top: 0, left: -200px */
+            transform: translateX(-200px); 
+            transition: 0.5s ease-out;
+            /* vertical-slign 을 적용하니 버튼과 이미지가 빈틈없이 붙었음 | 안주면 밑에 빈틈이 생겨버림 */
+            vertical-align: bottom;
+        }
+        .pic img.on{ 
+            transform: translateX(0px); 
+         }
+        button{ 
+            width: 200px;
+            height: 50px;
+            background: #333;
+            color: #fff;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="pic">
+        <img src="./images/bear.jpg" alt="곰인형">
+    </div>
+    <button>hover 이벤트</button>
+
+    <script>
+        $(function(){
+            /* 체인식 방식으로 작성, 이벤트는 . 을 이용해 붙여서 사용. 코드의 길이를 줄일 수 있음 */
+            $('button').mouseover(function(){
+               $('.pic img').toggleClass('on');
+            }).mouseout(function(){
+               $('.pic img').toggleClass('on');
+            });
+
+            //hover() 사용
+            //mouseenter()와 mouseleave() 를 합친 함수
+            /* $('button').hover(function(){
+               $('.pic img').toggleClass('on');
+            }); */
+        });
+    </script>
+
+<!-- <script>
+    $(function(){
+        /* mouseover 버튼에 마우스가 올라갔을 때 기능 삽입 */
+        $('button').mouseover(function(){
+           $('.pic img').toggleClass('on');
+        });
+        /* mouseout 버튼에서 마우스가 벗어났을 때 기능 삽입 */
+        $('button').mouseout(function(){
+           $('.pic img').toggleClass('on');
+        });
+    });
+</script> -->
+</body>
+</html>
+
+<!-- 
+    prepend() -  div에 p를 마지막 첫번째 요소로 삽입(아래)
+    append() - $(div).append(<'p'>) div에 p를 마지막 자식요소로 삽입
+
+    prev() : 이전 요소
+    next() : 다음(아래) 요소 선택
+    siblings() : 형제
+
+    parent() : $('p')의 부모자식요소
+
+    align-items
+    flex-start: 요소들을 컨테이너의 꼭대기로 정렬합니다.
+    flex-end: 요소들을 컨테이너의 바닥으로 정렬합니다.
+    center: 요소들을 컨테이너의 세로선 상의 가운데로 정렬합니다.
+    baseline: 요소들을 컨테이너의 시작 위치에 정렬합니다.
+    stretch: 요소들을 컨테이너에 맞도록 늘립니다.
+
+
+    flex-direction
+    row: 요소들을 텍스트의 방향과 동일하게 정렬합니다.
+    row-reverse: 요소들을 텍스트의 반대 방향으로 정렬합니다.
+    column: 요소들을 위에서 아래로 정렬합니다.
+    column-reverse: 요소들을 아래에서 위로 정렬합니다.
+ -->

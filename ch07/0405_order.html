@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/0405_order.css">
+    <!-- ↓↓↓ window.onload = function(){}을 사용해서 헤드쪽에 위치해도 실행되도록 설정하였음 -->
+    <script src="./js/0405_oder.js"></script>
+</head>
+<body>
+    <div id="container">
+
+        <from name="order" action="order.jsp" mathod="post">
+            <fieldset>
+                <legend>주문 정보</legend>
+                <ul>
+                    <li>
+                        <label class="field" for="billingName">이름</label>
+                        <input type="text" class="input-box" id="billingName" name="billingName">
+                    </li>
+                    <li>
+                        <label class="field" for="billingTel">연락처</label>
+                        <input type="text" class="input-box" id="billingTel" name="billingTel">
+                    </li>
+                    <li>
+                        <label class="field" for="billingAddr">주소</label>
+                        <input type="text" class="input-box" id="billingAddr" name="billingAddr">
+                    </li>
+                </ul>
+            </fieldset>
+        </from>
+
+        <from name="ship">
+            <fieldset>
+                <legend>배송 정보</legend>
+                <ul>
+                    <li>                        
+                        <input type="checkbox" id="shppingInfo" name="shppingInfo">
+                        <label for="shppingInfo" class="check">주문 정보와 배송 정보가 같습니다</label>
+                    </li>
+                    <li>
+                        <label class="field" for="shppingName">이름</label>
+                        <input type="text" class="input-box" id="shppingName" name="shppingName">
+                    </li>
+                    <li>
+                        <label class="field" for="shppingTel">연락처</label>
+                        <input type="text" class="input-box" id="shppingTel" name="shppingTel">
+                    </li>
+                    <li>
+                        <label class="field" for="shppingAddr">주소</label>
+                        <input type="text" class="input-box" id="shppingAddr" name="shppingAddr">
+                    </li>                    
+                </ul>
+            </fieldset>
+            <button type="submit" class="order">결제하기</button>
+        </from>
+    </div>  
+    <!-- <script src="./js/0405_oder.js"></script>   -->
+</body>
+</html>

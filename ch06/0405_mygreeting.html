@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>인사말 반복하기</title>
+    <style>
+        section{
+            text-align: center;
+        }
+        h3{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h2>인사하기</h2>
+        <h3 id="demo"></h3>
+    </section>
+
+    <script>
+        //생일 축하해!!
+        let message = ["생일 축하해!!", "고맙습니다.", "오늘도 좋은 하루"]  //여러개를 넣고싶다~ 배열을 만들어 줍니다
+        let msgIdx = 0;
+
+        myGreeting();        
+
+        function myGreeting(){
+            document.getElementById("demo").innerHTML = message[msgIdx];  //msgIdx 가 0 이였다가
+            msgIdx = msgIdx + 1;                                          //1이 증가 할테고 그런데 지금은 변화가 없죠
+            console.log(msgIdx);
+
+            if(msgIdx == message.length){
+                msgIdx = 0;
+            }
+
+            //3초후에 완료된 후 계속 함수 호출되어서
+            setInterval(myGreeting, 3000);   //콜백 함수
+        }
+
+        // document.getElementById("demo").innerHTML = "생일 축하해!";   //한개만 가능
+        // document.getElementById("demo").innerHTML = message[1];   //let message 배열에서 1번만 넣고싶다면 이렇게
+
+        //지금은 계속 증가하고 있는 상태 - 설정한 횟수를 넘어버리면 undefined 출력됨 / 지금은 0,1,2 까지만 있음
+        /* function myGreeting(){
+            document.getElementById("demo").innerHTML = message[msgIdx];  //msgIdx 가 0 이였다가
+            msgIdx = msgIdx + 1;                                          //1이 증가 할테고 그런데 지금은 변화가 없죠
+            console.log(msgIdx);
+            
+            setTimeout(myGreeting, 3000);   //콜백 함수
+        } */  
+    </script>
+</body>
+</html>
+
+<!-- 
+    setInterval(함수, 1000ms)
+    setTimeout(함수, 1000ms)
+ -->

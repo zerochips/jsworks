@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lotto 추첨</title>
+    <!-- 
+        let lotto = new Array(6);
+
+        document.write(<p>"번호 : ");
+        for(let i=0; i<lotto.length; i++){
+            let num = Math.floor(Math.random()*45+1);
+            lotto[i] = num;
+        }
+     -->
+     <style>
+        body{
+            width: 350px;
+            height: 350px;
+            border: 1px solid #ccc;
+            text-align: center;
+            border-radius: 50%;
+        }
+        p{
+            width: 350px;
+            text-align: center;
+            font-size: 25px;
+            font-weight: bold;
+            position: absolute;
+            top: 100px;
+        }
+        hr{
+            margin-top: 170px;
+        }
+     </style>
+</head>
+<body>
+    <script>
+        let lotto = new Array(6); //로또 배열 생성
+
+        //랜덤 번호 추첨
+        document.write("<p>로또 번호 : <hr>");
+
+        for(let i = 0; i<lotto.length; i++){
+            let num = Math.floor(Math.random()*45)+1;
+            lotto[i] = num;  //로또 배열에 저장
+            console.log(lotto);
+
+            //중복 제거
+            for(let j=0; j<i; j++){
+                if(lotto[j] == lotto[i]){
+                    console.log("중복 번호 : " + lotto[i]);
+                    i--;   //중복된 인덱스 삭제
+                }
+            }
+        }
+        //출력
+        /* for(let i = 0; i < lotto.length; i++){
+            document.write(lotto[i] + ", ");
+        }
+        document.write("</p>") */
+        
+        for(let i = 0; i < lotto.length; i++){
+                if(i === lotto.length-1 ){
+                    document.write(lotto[i] + "번");
+                }else{
+                    document.write(lotto[i] + "번, ")
+                }
+            }
+            document.write("</p>");
+        
+    </script>
+    
+</body>
+</html>

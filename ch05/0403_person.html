@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체 정의</title>
+    <script>
+        /* 
+        let 객체이름 = {
+            속성이름 : 값, 
+            함수이름:function(){}}
+        */
+
+            
+
+        //객체 만들기
+        let person = {
+            name : "추신수",
+            age : 40,
+            isMerried: true,
+            numberOfchildren: 3,
+
+            play: function(){
+                //person.name인데 자기자신 일때 this를 사용
+                //여러개 못 만듦 - 하나만 가능
+                alert(this.name + "가 홈런을 친다.");
+            }
+        }
+
+        //객체 사용
+        console.log("이름 : " + person.name);
+        console.log("나이 : " + person.age);
+        console.log("자녀수 : " + person.numberOfchildren);
+        person.play();
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
+
+<!-- 
+    사용자 함수 - 뒤만 대문자
+    funtion showHide함수이름(){}
+
+    사용자 객체 - 첫 글자 부터 대문자
+    생성자함수(클래스)
+    function ShowHide객체이름(){}
+
+    배열
+    let book = ["자바책", "웹 교재", "파이썬  책"] 
+
+    객체 1개 - json - 자바스크립트 표준 (xml ->json)
+    let book = { "title":"반응형 웹", "writer": "김운아" }
+
+    객체 여러개(클래스)
+ -->

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>jQuery -val() 함수</title>
+        <script src="./js/jquery-3.6.4.js"></script>
+    </head>
+    <body>
+        <input type="text" id="t_input">
+        <button type="button">입력</button>
+        
+        <p>결과<input type="text" id="t_output" disabled></p>
+
+        <script>
+            $(document).ready(function(){
+                $("button").click(function(){
+                    let text = $("#t_input").val();
+                    console.log(text);
+
+                    //아래 결과 값에 입력한 값이 나타남
+                    // $("#t_output").val(text);
+                    $("#t_output").val($("#t_input").val());
+                });                
+            });
+        </script>
+    </body>
+</html>

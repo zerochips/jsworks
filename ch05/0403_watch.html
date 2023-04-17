@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>디지털 시계 구현</title>
+</head>
+<body>
+    <h1>디지털 시계</h1>
+    <p id="display"></p>
+    
+    <script>
+        setInterval(setWatch, 1000);
+
+        function setwatch(){
+            //현재 시간 생성
+            let date = new Date();
+            let now = date.toLocaleTimeSrting();
+            document.getElementById("display").innerHTML = now;
+        }
+    </script>
+</body>
+</html>
+
+<!-- <h2>디지털 시계</h2>
+    <p id="display"></p>
+
+    <script>
+        setInterval(setWatch, 1000);
+
+        function setWatch(){
+            let date = new Date(); //현재 시간 생성
+            let now = date.toLocaleTimeString();  //시간만 출력
+            document.getElementById("display").innerHTML = now;  //세계 표준시
+        }
+    </script>   -->

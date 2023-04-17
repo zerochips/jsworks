@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array 객체의 map 함수</title>
+</head>
+<body>
+    <h2>Array map()</h2>
+    <p id="demo"></p>
+
+    <script>
+        const numbers = [4, 9, 16, 25];
+
+        //배열 복사
+        //let arr = []; //빈 배열 생성
+        let arr = new Array(4); //크기가 4인 배열 생성
+        arr = numbers;
+        console.log(arr);
+
+        //map() - 배열 내의 요소 각각에 대해 정의한 함수를
+        //호출한 결과 새로운 배열을 반환한다.
+        //함수의 매개변수 - 변수
+        //함수의 매개변수 - 함수
+        
+        let arr2 = numbers.map(myNumber);  //()괄호 생략
+
+        function myNumber(num){ //num = 4, 9, 16, 25
+            //return num;
+            return num *10;  //연산 가능
+        }
+        document.getElementById("demo").innerHTML = arr2;
+        
+    </script>
+    
+</body>
+</html>
+
+<!-- 
+    배열의 복사
+    let odd= [1,3,5,7,9];
+    //let arr = [] //빈배열
+
+    let arr = new Array(5)
+    arr = odd
+
+ -->

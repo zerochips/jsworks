@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>removeChild() 속성 사용</title>
+    <script>
+        function myFunction(){
+            //ul 부모를 선택해
+            let list = document.getElementById("myList");
+            //list.removeChild(list.firstElementChild);  //맨 앞에꺼 삭제list.removeChild 이건 ul 이고 list.firstElementChild 이건 li 이잖아 어라 다 삭제되네
+            //list.removeChild(list.lastElementChild);   //맨 뒤에꺼 삭제
+            //list.removeChild(list.children[1]);          //삭제하고 싶은 위치 삭제
+            list.removeChild(list.children[1].nextElementSibling);    //하나만 더해볼게요 이게 제이쿼리에서 많이 나오는건데 한 번 해볼게요 //자기 자신이 아니라 다음껄 삭제하고 싶을 때 사용 - 바로 옆에가 삭제됨 1을 넣으면 2가 삭제됨
+            
+        }
+    </script>
+</head>
+<body>
+    <h2>removeChild() 사용</h2>
+    <button onclick="myFunction(); this.onclick='' ">삭제</button>
+
+    <ul id="myList">
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Water</li>
+    </ul>    
+</body>
+</html>

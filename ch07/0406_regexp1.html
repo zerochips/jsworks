@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>정규 표현식 -RegExp 객체</title>
+</head>
+<body>
+    <h2>자바스크립트 정규 표현식</h2>
+
+    <p id="demo"></p>
+
+    <script>
+        //match(/정규 표현식/) - 대소문자 구분
+        //정규 표현식은 // 슬래시 안에 넣어야 한다
+        //match(/정규 표현식/i) - 대소문자 구분하지 않음        
+        //RegExp 객체 말고 매체함수를 써서 먼저 해볼게요
+        //let result = text.match(/W3Schools/);  //text.match(/W3Schools/);이거를 를 변수에 담아볼게요 let 이 붙음
+        let text = "Visit W3Schools";
+        let result = text.match(/W3Schools/i);
+
+        //결과를 출력해 볼게요
+        document.getElementById("demo").innerHTML = result;
+    </script>
+</body>
+</html>
+
+<!-- 
+    정규 표현식(Ragular Expression)
+    let str = new RegExp(''/[a-zA-Z]/") or (''/best/") or (''/[0~9]/") //파이썬 자바에서 쓰는 방식
+    /^[a-c]/ 앞에 ^붙이면 a-c는 아니다라는 말
+
+    const date = new Date("2023-1-1")
+
+    validatation(유효성 검사)
+ -->

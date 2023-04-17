@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>변수의 유효 범위(scope)</title>
+</head>
+<body>
+    <h3>전역 변수의 유효 범위</h3>
+
+    <script>
+        //전역변수 - 메모리 영역((고정적)정적[static] 영역)
+        //생성 - 메인 영역에서 생성하면 전체에 영향을 미치며 """값이 누적"""(공유)
+        //소멸 - 프로그램이 종료될 때 메모리(전역 공간)에서 해제
+
+        //↓ let x = 1; 여기서 메인의 지역변수지만
+        //↓ let x = 1; oneUp의 전역변수라고 할 수 있다.
+        //↓ let x = 1; 여기서 변수 선언
+        let x = 1;
+
+        function oneUp(){
+            x = x + 1;
+            return x;  //출력하던지 return 하던지
+        }
+
+        //document.write(oneUp());  //여기서 출력해볼게요
+        
+        //document.write("unm = " + unm);  //여기서 출력해볼게요        
+        //document.write("x = " + x); // x는 변수가 아니라고 나옴 return x; 에서 사라졌음. return x를 지역변수라고 함.
+
+        //let unm = oneUp(); 
+        document.write("unm = " + oneUp() + "<br>"); //2
+        document.write("x = " + x + "<br>");
+        document.write("unm = " + oneUp() + "<br>"); //3
+        document.write("x = " + x + "<br>");
+        document.write("unm = " + oneUp() + "<br>"); //4
+        document.write("x = " + x + "<br>");
+
+        document.write("<br>");
+
+        document.write("unm = " + oneUp() + "<br>"); //2
+        document.write("unm = " + oneUp() + "<br>"); //3
+        document.write("unm = " + oneUp() + "<br>"); //4
+        document.write("x = " + x);
+        // ↑ 마지막 값이 나타남 x = 4
+        // ↑ let x = 1; 외부에 있으니까 값이 출력됨
+
+        /* 
+        함수 - 코드 블럭
+        변수 사용 유의
+        ----------------
+        메인함수 - 변수
+        사용자 함수 - 코드블럭
+        {변수, 제어문}
+        ---------------
+        변수 사용 유의 - 변수의 범위(scope)
+        전역변수(global), 지역변수(local)
+        메모리 위치가 다름
+
+        전역변수를 썼을 때 구구단 확인 버튼을 눌렀을 때 무한으로 출력됐었음
+        지역변수를 사용하면 한 번 출력(두번 눌러도 재출력되지 않음) 
+        ---------------
+        */
+        
+    </script>
+    
+</body>
+</html>
+
+<!-- 
+
+ -->

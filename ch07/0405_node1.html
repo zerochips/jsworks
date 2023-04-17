@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM에서 노드(태그) 추가하기</title>
+</head>
+<body>
+    <ul id="myList">
+        <li>Coffee</li>
+        <li>Tea</li>
+    </ul>
+    <!-- this.onclick='' -> 자기 자신(버튼)을 클릭했을 때 호출할 함수 없음  -->
+    <button onclick="myFunction(); this.onclick='' ">실행</button>
+    <!-- this.onclick='' 까지 사용하면 한 번만 출력됨. function 한 번만 하고 싶을 때 -->
+    <!-- button onclick="myFunction() 만 쓰면 계속 호출됨. Water 계속 나타남. -->
+
+    <script>
+        //이제 함수 만들어야죠
+        //노드 추가 함수 - createElement()
+        function myFunction(){
+            let newLi = document.createElement("li"); //여기 넣는 li 가 태그임
+            let textNode = document.createTextNode("Water"); //얘도 변수에 할당을 해줘야죠 (let textNode)
+            newLi.appendChild(textNode);   //li에 Water를 연결(추가)
+            //<li>Water</li>
+
+            //<ul> 안에 포함시키기
+            //이제 어떻게 해야햐냐면 이제 ul를 선택해야 돼요
+            //id 를 줘
+            //let list = document.getElementById("myList");
+            //list.appendChild(newLi);
+            //두 줄에 나눠 사용할 수도 한줄에 한번에 사용할 수도있음 아래가 한번에 표현한 방식.
+            let list = document.getElementById("myList").appendChild(newLi);
+            
+            
+            //특정 위치에 추가 - 2번 앞에 추가됨
+            //list.insertBefore(newLi, list.childNodes[2]);
+
+        }
+    </script>
+    
+</body>
+</html>

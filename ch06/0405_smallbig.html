@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마우스로 선택한 사진 바꾸기</title>
+    <style>
+        /* body{
+            background-color: rgb(255, 200, 97);
+        } */
+        #content{
+            width: 600px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 30px;
+        }
+        #imagesline{
+            left: 30px;
+            position: absolute;
+            margin-top: 20px;
+        }
+        #textline{
+            text-align: left;            
+        }
+        .smallPic{
+            margin: 10px;
+        }
+        .small{
+            width: 100px;
+            height: 100px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <section id="content">
+        <h2>커피의 세계</h2>
+        <div id="imagesline">
+            <img src="./images/coffee-blue.jpg" alt="커피잔" id="cup" width="300" height="300">
+            
+            <!-- 이전과 다르게 형제 라인으로 바꿔줬어요. div 확인해 보세요 -->
+            <div class="smallPic">
+                <img src="./images/coffee-blue.jpg" alt="커피잔" class="small">
+                <img src="./images/coffee-gray.jpg" alt="커피잔" class="small">
+                <img src="./images/coffee-pink.jpg" alt="커피잔" class="small">                
+            </div>
+        </div>
+
+        <div id="textline">
+            <ul>
+                <li>상품명 : 에디오피아 게뎁</li>
+                <li>판매가 : 9,000원</li>
+                <li>배송비 : 3,000원</li>
+                <li>(50,000원 이상 구매 시 무료)</li>
+                <li>적립금 : 180원(2%)</li>
+                <li>로스팅 : 2019.06.17</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- script 위치가 중요함 -->
+    <script src="./js/0405_smallbig.js"></script>
+</body>
+</html>

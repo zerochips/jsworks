@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>주사위 던지기 게임</title>
+    <script>
+        //주사위 2개를 10번 던지기
+        for(let i=1; i<=10; i++){
+            let dice1 = Math.floor(Math.random()*6) + 1;
+            let dice2 = Math.floor(Math.random()*6) + 1;
+            let total = dice1 + dice2;  //cace1, cace2 표시되어야 결과값 출력
+            console.log(total);
+            // console.log(dice1+" : "+dice2);
+            
+            //----------- cace1 -----------
+                if(total == 8)  //뒤에 ( , )마가 들어가면 끝맺음. 출력 오류
+                    console.log("Eight Thrown!!");
+                if(total == 11)
+                    console.log("Eleven Thrown!!");
+                if(dice1 == dice2)
+                    console.log("Double Thrown!!");
+
+            //----------- cace2 -----------
+                /* if(total == 8){
+                    console.log("Eight Thrown!!");
+                }
+                else if(total == 11){
+                    console.log("Eleven Thrown!!");
+                }
+                else if(dice1 == dice2){
+                    console.log("Double Thrown!!");
+                } */
+
+            //----------- cace3 -----------
+                /* if((dice1 + dice2) === 8 ){
+                    console.log("Eight Thrown!!");
+                }
+                else if((dice1 + dice2) === 11){
+                    console.log("Eleven Thrown!!");
+                }
+                else if(dice1 === dice2){
+                    console.log("Double Thrown!!");
+                } */
+            }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
+
+<!-- 
+    //주사위 2개를 만들어 10번 던지기
+    //만약 두 눈의 합이
+    //8이 나오면 "Eight Thrown!"
+    //11이 나오면 "Eleven Thrown!"
+    //같으면 "Double Thrown!"
+ -->

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>중첩 for문(이중 for문)</title>
+    <script>
+        // 5행 5열 테이블을 만들어서 - "가" 출력
+        for(var i=0; i<5; i++){
+            for(var j=0; j<5; j++){
+                document.write("*");
+            }
+            document.write("<br>");
+        }
+
+        /* 
+        *
+        **
+        ***
+        ****
+        *****
+        */
+
+        for(var i=0; i<5; i++){
+            for(var j=0; j<i+1; j++){
+            // for(var j=0; j<=i; j++){ 이렇게 표현도 가능
+                document.write("*");
+            }
+            document.write("<br>");
+        }
+
+        /* 
+        i=0, j=0                   *
+        i=1, j=0, j=1              **
+        i=2, j=0, j=1, j=2         ***
+        i=3, j=0, j=1, j=2, j3     ****
+        i=3, j=0, j=1, j=2, j3 j4  *****
+        */
+
+        for(var i=0; i<5; i++){
+            for(var j=0; j<5-i; j++){
+                document.write("*");
+            }
+            document.write("<br>");
+        }
+
+        /* 
+        i=0,j=0 가
+            j=1 가
+            j=2 가
+            j=3 가
+            j=4 가
+              
+        i=1,j=0 가
+            j=1 가
+            j=2 가
+            j=3 가
+            j=4 가
+        */
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array 객체 - map() 함수</title>
+</head>
+<body>
+    <h2>map() 함수 - 새로운 배열을 생성해 줌</h2>
+    <p id="demo"></p>
+
+    <script>
+        //객체 = {속성 : 속성값}, 사용할 때는 점(.) 연산자로 접근하라고 했죠
+        /* let obj = {과일 : "aaaple", 차 : "sonata" } //과일을 ""를 써서 문자로 쓰지말고 "" 없애서 변수로 쓸게요
+        console.log(obj.과일); */
+
+        const persons = [
+            {이름 : 'Jobs', 성 : 'steve'},  //변수를 한글로 쓴겁니다. 이름, 성이 변수죠
+            {이름 : '그래', 성 : '장'},
+            {이름 : 'Gates', 성 : 'Bill'},
+        ];
+
+        let arr = persons.map(myFunction);
+
+        document.getElementById("demo").innerHTML = arr;  //성이 return 받아서 들어갈겁니다
+        
+        function myFunction(item){  //myFunction에 매개변수 item을 넣을게요
+            return [item.성, item.이름].join(" ");  //,가 다 붙어 있는데 join함수를 사용해서 띄어주면 ,가 사라지고 연결시켜 줍니다. // 문자열을 구분기호로 구분
+        }       
+    </script>    
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>비교 연산자</title>
+</head>
+<body>
+    <script>
+        //등호(==, !=, ===, !==), 부등호(>, >=, <, <= )
+        let n1 = 10, n2 = 11
+        let result;
+
+        //비교 연산
+        result = (n1 > n2);
+
+        //출력
+        console.log(result); // false
+        
+        result = (n1 < n2);
+        console.log(result); // true
+
+        result = (n1 === n2);
+        console.log(result); // false
+
+        result = (n1 !== n2);
+        console.log(result); // true
+
+        //논리 연산
+        console.log("======================")
+        result = (n1 > n2) && ( n1 !== n2); //and
+        console.log(result); //false
+
+        result = (n1 > n2) || ( n1 !== n2); //or
+        console.log(result); //true
+
+        result = !(n1 > n2); //not
+        console.log(result); //true
+    </script>
+    
+    
+</body>
+</html>
+
+<!-- 
+    !== / ===
+    == 과 ===은 같은 의미를 가지지만
+    == 은 숫자 10과 '10' 문자를 나타내는 10을
+    가려내지 못함.
+
+    보완하기 위해 === 를 공통적으로 사용하기로함.
+
+    and 연산자, 놀리곱, 교집합
+    두 조건이 모두 참일때 참
+    T = true
+    true and true -> ture
+    T &&(and) T -> T
+    T &&(and) F -> F
+    F &&(and) T -> F
+    F &&(and) F -> F
+
+    or 연산자 - 논리합, 합집합
+    두 조건중 한 개만 참이어도 참
+    T = true
+    T ||(or) T -> T
+    T ||(or) F -> T
+    F ||(or) T -> T
+    F ||(or) F -> F
+
+    not 연산자 - 논리 부정
+    (not) !T -> F
+    (not) !F -> T
+
+    비교연산(논리연산) - 조건연산(삼항연산)
+    (조건식) ? true : false
+    
+ -->

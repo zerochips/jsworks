@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>continue문</title>
+    <script>
+        //break문
+        /*for(var i = 1; i <=10; i++){
+            //1부터 5까지 출력 하려면
+            if( i > 5)  // break 가 한 글자라 {} 괄호 빼버림 
+                break;            
+            console.log(i);
+        }*/
+        //coninue문
+        for(var i = 1; i <=10; i++){
+            //1부터 10까지 출력(5만 제외하고)
+            //반복문 내부에서 continue 문을 만나면
+            //이후에 반복되는 부분을 수행하지 않음(증감식은 수행함)
+            if( i == 5) //5를 만났을 때 넘어가버린다 1,2,3,4,   6,7,8,9,10 [ 5가 빠짐 ]
+                continue;
+            console.log(i);
+        }
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
+
+<!-- 
+    반복문
+조건 - break문 - 빠져나오는
+
+
+continue; - 아래로 수행되지 않고 다시 올라감 
+ -->

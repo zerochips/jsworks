@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if문</title>
+    <script>
+
+        var limit_speed = parseInt(prompt("속도를 입력하세요: "));
+        var result;
+
+        //typeof(limit_speed) != number
+        if(limit_speed == NaN){
+            document.write("입력이 취소되었습니다");
+        }
+        else{
+            limit_seed = parseInt(limit_speed)
+            if(limit_speed >= 50 ){
+            // document.write("속도 위반 입니다<br>");
+            result = "속도 위반입니다.<br>"
+            }
+            else{
+                // document.write("안전 속도 준수<br>");
+                result = "안전 속도 준수.<br>"
+            }
+
+            //출력
+            document.write(result);
+            document.write("현재 속도는 " + limit_speed + "입니다");
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
+<!-- 
+    조건문(if)
+    if(조건){//조건 = true
+    실행문
+    }else{
+    실행문
+    }
+
+    조건1, 조건2가 모두 false 일 때 아래 조건문으로 실행됨.
+ -->

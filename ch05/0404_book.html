@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체의 생성과 사용</title>
+    <script>
+        //책 1권 - 속성(key): 속성값
+
+        let book = {
+            title : "웹 표준의 정석",
+            author : "고경희",
+            pages : 650,
+            price : 30000,  // 콤마 ( , ) 빼먹지 마세요
+
+            //객체 내부에서 자신을 가리킬 때 this 사용함
+            info : function(){
+                alert(this.title + "책의 분량은 " + this.pages + "페이지 입니다.");
+            }
+        }
+        //객체이름(book).속성(title), 객체이름.함수
+        console.log(book.title);
+        console.log(book.author);
+        book.info();
+                
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
+
+<!-- 
+    객체
+    객체 1개 - json
+    let person = { name: "홍길동", phone: "010-1234-5678" }
+
+
+    객체 여러개 - 클래스(생성자 함수)
+    function Person(name, phone){
+        this.name = name;
+        this.phone = phone;
+    }
+
+    let person1 = new Person("홍길동", "010-1234-1234")
+
+    배열객체
+    let person = [p1, p2, p3]
+
+    함수
+    function eat(){
+        밥을 먹는다
+    }
+
+    배열
+    let person = ["김", "이", "박"]
+ -->

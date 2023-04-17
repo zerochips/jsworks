@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>체크 박스의 checked 속성</title>
+</head>
+<body>
+    Checkbox : <input type="checkbox" id="myCheck">
+
+    <button onclick="check()">Check Checkbox</button>
+    <button onclick="uncheck()">Uncheck Checkbox</button>
+
+    <script>
+        function check(){
+            //checked 의 값은 true/false
+            document.getElementById("myCheck").checked = true;            
+        }
+
+        function uncheck(){
+            document.getElementById("myCheck").checked = false;
+        }
+    </script>
+</body>
+</html>
+
+<!-- 
+    폼에서  자바스크립트
+    회원 가입 폼
+    아이디 - 글자수
+
+    비밀번호
+    비밀번호 확인
+    비밀번호가 일치하지 않을 때
+ -->

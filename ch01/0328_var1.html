@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>변수의 선언과 사용</title>
+    <script>
+        /* 학생 손흥민, 2학년 3반
+         오른쪽에 있는 값을 왼쪽에 대입
+         '+' 문자 연결 연산자
+         '=' 대입 연산자 */
+        
+        var name = '손흥민';
+        var grade = 2;
+        var grade;        
+        grade = 2;
+        //var class // 예약어(이미 약속된 명령어)는 사용 못함
+        var schoolClass = 3;
+
+        /* console.log("이름:" + name);
+        console.log("학년:" + grade);
+        console.log("반:" + schoolClass); */
+
+        /* 한 줄에 선언하기 */
+        // console.log("이름:" + name + ",학년:" + grade + ",반:" + schoolClass);
+
+        // typeof()함수는 자료형을 알려주는 기능이 있음
+        /* string 이라고 console 창에 표시됨 */
+        console.log(typeof(name));
+        /* number 라고 console 창에 표시됨 */
+        console.log(typeof(grade));
+        /* 브라우저 화면상에 표시하고 싶을 때 document.write 사용 */
+        document.write("이름:" + name + ",학년:" + grade + ",반:" + schoolClass);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
+
+<!-- 
+    
+    문자가 끈처럼 보인다고해서 String
+    산술연산
+    비교연산(놀리연산)
+    비트연산
+
+ -->

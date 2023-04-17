@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>정규 표현식</title>
+</head>
+<body>
+    <p>RegExp 객체 사용 - text() 함수 사용</p>
+
+    <script>
+        //문자열 일치하는지 체크
+        //pattern 객체 생성 -  RegExp(정규표현식)
+        //let pattern = new RegExp('H');  //미리 정의해놓고
+        let pattern = new RegExp(/H/i);  //미리 정의해놓고 뒤에 i를 넣으면 대소문자 구분없이 찾아준다
+        let str = "Hellow ~ My Site!";
+        let match = pattern.test(str);
+        //let match = pattern.test("Hello~ My Site!");        
+        //document.write(match + "<br>");
+
+        //변수(객체) = 표현식
+        let pattern2 = /hello/i;  //회원가입할 때 이 방식을 사용할 겁니다
+        let match2 = pattern2.test("Hellow ~ My Site!");
+        //document.write(match2+ "<br>");
+
+        //아이디 글자수 체크
+        //^ - 정규식을 시작한다는 말, $ - 정규식을 끝냄
+        //'+' 문자 반복(여러개)
+        //let regEx = /^[a-z0-9]+$/  //지금 숫자, 솟문자만 체크되는 거죠        
+        //let regEx = /^[A-Z]+$/      
+        //let regEx = /^[a-z0-9]{5}$/
+        //let regEx = /^[a-zA-Z0-9]{5}$/  //앞에 5숫자 확실한 표시가 있으면 + 를 빼야함 - 5개 까지만 허용하겠다는 말
+        let regEx = /^[a-zA-Z0-9]$/
+        id = "abcde123#";                //이렇게하면 5개가 넘었으니까 false 죠
+        let mat = regEx.test(id);
+        document.write(mat);
+    </script>
+</body>
+</html>
+
+<!-- 
+    test() - true/false
+    일치된 것을 찾으면 true
+    아니면 false
+ -->

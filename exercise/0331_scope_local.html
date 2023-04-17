@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>변수의 유효 범위(scope)</title>
+</head>
+<body>
+    <h3>지역 변수의 유효 범위</h3>
+
+    <script>
+        //메인 영역 | 메인 영역에 변수 만듦
+        //let animal = 'cat'; //← 메인 영역에 있는 지역변수
+
+        //지역변수 - 메모리 영역(스택 영역)
+        //생성 - 함수 또는 제어문의 코드블럭 내부에서 생성됨
+        //소멸 - 함수나 제어문의 코드 블럭을 벗어났을 때 메모리에서 해제
+
+        function oneUp(){            
+            let x = 1; //x는 지역변수 | x라는 변수에 할당했음
+            x = x + 1;
+            return x;  //출력하던지 return 하던지
+        }
+
+        //document.write(oneUp());  //여기서 출력해볼게요
+        
+        //document.write("unm = " + unm);  //여기서 출력해볼게요        
+        //document.write("x = " + x); // x는 변수가 아니라고 나옴 return x; 에서 사라졌음. return x를 지역변수라고 함.
+
+        //let unm = oneUp(); 
+        document.write("unm = " + oneUp() + "<br>"); //2
+        document.write("unm = " + oneUp() + "<br>"); //2
+        //document.write("x = " + x);
+        
+    </script>
+    
+</body>
+</html>
+
+<!-- 
+
+ -->

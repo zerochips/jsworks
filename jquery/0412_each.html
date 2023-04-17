@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery - each() 함수 : 배열 관련</title>
+    <script src="./js/jquery-3.6.4.js"></script>
+    <script>
+        //익명 실행함수
+        $(function(){
+            $('button').click(function(){
+                $("li").each(function(idx, element){
+                    // console.log(element);
+                    let text = $(this).text();
+                    alert(text);
+                    console.log(text);
+
+                    //console.log(idx, element);
+                    // alert($(this).text());
+                    // console.log($(this).text());                    
+                });
+
+                //매개변수 1개 - 인덱싱, 매개변수 2개 - 인덱싱, 텍스트 출력 | (index, element) 둘 다 넣어줘야 인덱스와 li 내용이 나타남 element만 사용하면 인덱스 번호만 출력됨
+                /* $("li").text(function(index, element){
+                    console.log(index, element);
+                }); */
+            });
+        });
+    </script>
+</head>
+<body>
+    <button type="button">알림창 실행</button>
+
+    <ul>
+        <li>Coffee</li>
+        <li>Milk</li>
+        <li>Tea</li>
+    </ul>
+</body>
+</html>
+
+<!-- 
+    자바스크립트
+    -getElementById(선택자) -> id
+    -querySelector(선택자) -> 태그, class, id
+    속성
+    sytle.display
+    style.color
+    onclick= 'func()'
+
+    제이쿼리
+    - $(선택자) - 태그, class, id
+    .css("color", "red")
+    .click()
+    .click(function(){})
+    .html("<p></p>")
+    .text("안녕하세요")
+ -->
+
+<!-- <script>
+    //이렇게 하니까 순번이 나옴 0, 1, 2 다 나옴
+    //익명 실행함수
+    $(function(){
+        $('button').click(function(){
+            $("li").each(function(element){
+                console.log(element);
+            });
+        });
+    });
+</script> -->
+
+<!-- <script>
+    //익명 실행함수
+    //숫자 리스트 내용 다 같이 나옴
+    $(function(){
+        $('button').click(function(){
+            $("li").each(function(element){
+                console.log($(this).text());
+            });
+        });
+    });
+</script> -->
+
+<!-- <script>
+    //콘솔에 인덱스 번호와 li의 내용이 같이 출력됨
+    //익명 실행함수
+    $(function(){
+        $('button').click(function(){
+            $("li").each(function(idx, element){
+                // console.log(element);
+                let text = $(this).text();
+                //alert(text);
+                //console.log(idx, element);
+                // alert($(this).text());
+                // console.log($(this).text());
+            });
+            $("li").text(function(index, element){
+                console.log(index, element);
+            })
+        });
+    });
+</script> -->

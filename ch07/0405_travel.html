@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>여행 준비물 점검 목록</title>
+    <link rel="stylesheet" href="./css/0405_item.css">
+</head>
+<body>
+    <div id="wrapper">
+        <h2>여행 준비물 점검 목록</h2>
+        <form action="addItem.jsp" method="post">
+            <input type="text" id="item" name="item" autofocus>
+            <button type="button" id="add" class="btnAdd" >추가</button>
+        <!-- type="button" ↑↑↑ 을 안쓰면 기본타입인 submit으로 설정되어있어 다른 창으로 넘어가버림 -->
+        </form>
+        <div id="itemList"></div>
+    </div>
+    
+    <script src="./js/0405_travel.js"></script>
+
+    <!--이렇게 쓰는걸 script src 에서 설정해주는 겁니다
+
+        <script>
+        let numbers = [];
+
+        numbers.push("수건");
+        console.log(numbers);
+    </script> -->
+</body>
+</html>

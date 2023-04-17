@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jquery-3.6.4.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".up").click(function(){
+                $(".content").slideUp();   //up 을 누르면 p 가 올라감
+            });
+            $(".down").click(function(){
+                $(".content").slideDown();   //up 을 누르면 p 가 올라감
+            });
+            $(".toggle").click(function(){
+                $(".content").slideToggle();   //up 을 누르면 p 가 올라감
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="content">
+        <p>운수 좋은날</p>
+        <p>Good Luck!!</p>
+        <p>운수 좋은날</p>
+        <p>Good Luck!!</p>
+        <p>
+            <img src="./images/bear.jpg" alt="곰">
+        </p>
+    </div>
+
+    <button class="up">up</button>
+    <button class="down">down</button>
+    <button class="toggle">UpDown</button>
+
+</body>
+</html>

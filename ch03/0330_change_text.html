@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>style 속성 사용</title>
+    
+</head>
+<body>
+    <!-- 글자를 클릭하면 색상이 변경됨 -->
+    <h1 onclick="changeText()" id="choice">Click on this text!</h1>
+
+    <script>
+        // 글자를 클릭하면 색상이 변경됨
+        //function 함수이름(){}
+        function changeText(){
+            let h = document.getElementById("choice");            
+            h.style.color = "orange";
+            h.style.fontFamily = "Arial";
+            h.style.fontSize = "8em";
+            h.style.fontStyle = "italic";
+            h.style.background = "green";            
+        }
+    </script>
+    
+</body>
+</html>
+
+<!-- 
+    배열(Array)
+    -여러 개의 연속적인 값을 저장하는 자료형
+
+    유형1
+    let 배열이름 = [값1, 값2....]
+
+    유형2
+    let 배열이름 = new Array(4) new Computer 등등 Array Computer 자리는 변동됨
+
+    getElementById().style.color ='red'
+    글자를 크릭하면 글자색 바꾸기
+ -->

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>indexOf 함수</title>
+    <script>
+        //------------ 문자를 1차원 배열이라고 함. ------------
+        let str = "Hello world, welcome world";
+
+        //------------ 앞에서 찾음 - 처음에 나오는 world를 찾아 ------------
+        let n1 = str.indexOf("world");  //6 출력
+        let n2 = str.indexOf("asia");   //-1 (위치를 못찾으면)
+
+        document.write(n1);
+        document.write("<br>");
+        
+        document.write(n2);
+        document.write("<br>");
+
+        //------------ 뒤에서 찾음 - 찾는것만 뒤에서 찾음 ------------
+        let n3 = str.lastIndexOf("world");  //21 출력
+        let n4 = str.lastIndexOf("go");     //-1 (위치를 못찾으면)
+
+        document.write(n3);  
+        document.write("<br>");  
+
+        document.write(n4);
+        document.write("<br>");
+
+        //------------ 배열로 찾음 ------------
+        let fruits = ['apple', 'banana', 'grape'];
+        let n5 = fruits.indexOf('grape');   //2 출력
+
+        document.write(n5);
+        document.write("<br>");
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

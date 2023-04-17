@@ -1,0 +1,10 @@
+*{margin: 0; padding: 0; box-sizing: border-box;}
+#content{ width: 330px; height: 380px; margin: 10px auto; padding: 10px 30px; border: 2px solid blue; border-radius: 10px; position: relative; /* 부모 기준 */}
+h2{padding: 30px; }
+p{line-height: 2;}
+.detail{ margin-bottom: 30px;}
+.detail b{ color: red; }
+.smallText{font-size: 0.9em;}
+.close{position: absolute; bottom: 20px; right: 40px;}
+.close a{ text-decoration: none; color: blue;}
+.close a:hover{ text-decoration: underline;}

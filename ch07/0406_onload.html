@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>window 객체의 onload()</title>
+    <script>
+        //헤드에 script를 올려놓고 실행시키려면 window.onload = function 을 사용하면 출력이 가능하다
+        window.onload = function(){
+            let p = document.getElementById("font");
+            p.style.color = "#00f";
+            p.style.fontWeight = "bold";
+            p.style.fontSize = "1.5em";
+        }
+    </script> 
+</head>
+<body>
+    <!-- 자바스크립트로 글꼴 색상을 파랑색, 굵기를 굵게 하기 -->
+    <p id="font">오늘도 좋은 하루!!</p>       
+</body>
+</html>
+<!-- 
+    window.onload() - 브라우저 처음에 실행될 때 기능(환경을 제공해준다고 생각하면 될것 같아요) 그래서 이걸 한 번 써볼게요
+    window.open()
+    alert()
+    prompt
+    DOM - Document of Moder(document 객체)
+    BOM - broser of Model(window 객체)
+ -->

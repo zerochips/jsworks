@@ -1,0 +1,30 @@
+body{ height: 2000px;}
+h1{ width: 200px; font-size: 5em; position: absolute; top: 100px; left: 300px; 
+    color: #fff;
+    animation-name: go_slide;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;            
+}
+section{ height: 1000px; background: url("../images/desert.jpg") no-repeat fixed; background-size: cover;}
+@keyframes go_slide{
+    from{
+        left: -100px;
+        /* opacity 0으로 설정하면 흰색이라 보이지 않음 - 0.2로 설정 */
+        /* 투명 */
+        opacity: 0.2;
+    }to{
+        left: 300px;
+        /* 불투명 */
+        opacity: 1;
+    }
+}
+
+@keyframes back_slide {
+    from{
+        left: 300px;
+        opacity: 1;
+    }to{
+        left: -100px;
+        opacity: 0;
+    }
+}
